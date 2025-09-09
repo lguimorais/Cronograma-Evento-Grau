@@ -40,3 +40,14 @@ render_agenda(df_f, unique_dates_sorted)
 
 st.markdown("---")
 render_table(df_f)
+st.markdown(
+    """
+    <style>
+    [data-testid="stAppViewContainer"] {
+        background-color: white;
+        color: black;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
