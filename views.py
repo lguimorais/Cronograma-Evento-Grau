@@ -8,7 +8,7 @@ def render_metrics(df_f):
     col1, col2, col3 = st.columns(3)
     col1.metric("quantidade de palestras", len(df_f))
     col2.metric("Palestrantes",
-                df_f["palestrante"].nunique())
+                df_f["Palestrante"].nunique())
     col3.metric("Datas do evento", df_f["Data_dt"].dt.date.nunique())
 
 
