@@ -1,0 +1,25 @@
+import streamlit as st
+
+
+def set_layout():
+    st.set_page_config(page_title="Cronograma Impacto Social", layout="wide")
+
+    # CSS customizado
+    st.markdown("""
+        <style>
+            html, body, [class*="css"] { font-family: 'Arial', sans-serif; }
+            .main { background-color: #f9fafb; }
+            h1, h2, h3 { color: #003366; }
+            .streamlit-expanderHeader { font-weight: bold; color: #1f2937; }
+            .stDataFrame { border-radius: 10px; overflow-x: auto; }
+        </style>
+    """, unsafe_allow_html=True)
+
+
+def render_header():
+    st.image("Logo.png", width=180)
+    st.title("📋 Cronograma — Impacto Social (Grau Dirceu)")
+    st.markdown(
+        "📅 Período: **16/09/2025 a 20/09/2025**  \n"
+        "Use os filtros no menu lateral para ajustar a visualização."
+    )
