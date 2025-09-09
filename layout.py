@@ -20,6 +20,11 @@ def render_header():
     st.image("Logo.png", width=180)
     st.title("📋 Cronograma — Impacto Social (Grau Dirceu)")
     st.markdown(
+        "Formulario de inscrição para as palestras: \n"
+        '<a href="https://forms.gle/7o9BC76m5C2U6xPG7" target="_blank">formulario de inscrição</a>',
+        unsafe_allow_html=True
+    )
+    st.markdown(
         "📅 Período: **16/09/2025 a 20/09/2025**  \n"
         "Use os filtros no menu lateral para ajustar a visualização."
     )
