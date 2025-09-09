@@ -20,7 +20,7 @@ def render_header():
     st.image("Logo.png", width=180)
     st.title("📋 Cronograma — Impacto Social (Grau Dirceu)")
     st.markdown(
-        '<a href="https://forms.gle/7o9BC76m5C2U6xPG7" target="_blank" style="font-size:22px; font-weight:bold;">Formulário de Inscrição para as palestras</a>',
+        '<a href="https://forms.gle/7o9BC76m5C2U6xPG7" target="_blank" style="font-size:22px; font-weight:bold;">Clique aqui:Formulário de Inscrição </a>',
         unsafe_allow_html=True
     )
     st.markdown(

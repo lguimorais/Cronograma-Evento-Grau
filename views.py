@@ -44,7 +44,7 @@ def render_agenda(df_f, unique_dates_sorted):
                         <p><b>🕒 Horário:</b> {row['Horário']}</p>
                         <p><b>📌 Turno:</b> {row['Turno']}</p>
                         <p><b>🎯 Atividade:</b> {row['Atividade']}</p>
-                        <p><b>👤 Ministrante:</b> {row['Palestrante']}</p>
+                        <p><b>👤 Palestrante:</b> {row['Palestrante']}</p>
                     </div>
                 """, unsafe_allow_html=True)
 
