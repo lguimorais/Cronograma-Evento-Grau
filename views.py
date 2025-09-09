@@ -6,10 +6,10 @@ from data_handler import to_excel_bytes
 def render_metrics(df_f):
     st.markdown("### 📊 Resumo dos Filtros")
     col1, col2, col3 = st.columns(3)
-    col1.metric("Sessões visíveis", len(df_f))
-    col2.metric("Palestrantes únicos",
-                df_f["Ministrante/Responsável"].nunique())
-    col3.metric("Datas visíveis", df_f["Data_dt"].dt.date.nunique())
+    col1.metric("quantidade de palestras", len(df_f))
+    col2.metric("Palestrantes",
+                df_f["palestrante"].nunique())
+    col3.metric("Datas do evento", df_f["Data_dt"].dt.date.nunique())
 
 
 def render_download(df_f):
@@ -44,7 +44,7 @@ def render_agenda(df_f, unique_dates_sorted):
                         <p><b>🕒 Horário:</b> {row['Horário']}</p>
                         <p><b>📌 Turno:</b> {row['Turno']}</p>
                         <p><b>🎯 Atividade:</b> {row['Atividade']}</p>
-                        <p><b>👤 Ministrante:</b> {row['Ministrante/Responsável']}</p>
+                        <p><b>👤 Ministrante:</b> {row['Palestrante']}</p>
                     </div>
                 """, unsafe_allow_html=True)
 
@@ -52,7 +52,7 @@ def render_agenda(df_f, unique_dates_sorted):
 def render_table(df_f):
     st.header("📑 Tabela Completa (Filtrada)")
     st.dataframe(
-        df_f[["Data", "Turno", "Horário", "Atividade", "Ministrante/Responsável"]]
+        df_f[["Data", "Turno", "Horário", "Atividade", "Palestrante"]]
         .reset_index(drop=True),
         use_container_width=True,
     )

@@ -10,7 +10,7 @@ def load_dataframe(path=EXCEL_PATH):
         df = pd.read_excel(path)
     else:
         df = pd.DataFrame(DEFAULT_DATA, columns=[
-            "Data", "Turno", "Horário", "Atividade", "Ministrante/Responsável"
+            "Data", "Turno", "Horário", "Atividade", "Palestrante"
         ])
     # Normalizar Data
     df["Data_dt"] = pd.to_datetime(df["Data"], dayfirst=True, errors="coerce")

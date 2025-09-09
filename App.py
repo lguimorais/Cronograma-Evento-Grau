@@ -17,12 +17,12 @@ sel_dates, sel_turnos, sel_ministrante, search_text = render_sidebar(df)
 # Aplicar filtros
 mask = df["Data_dt"].dt.strftime("%d/%m/%Y").isin(sel_dates)
 mask &= df["Turno"].isin(sel_turnos)
-mask &= df["Ministrante/Responsável"].isin(sel_ministrante)
+mask &= df["Palestrante"].isin(sel_ministrante)
 if search_text.strip():
     st_text = search_text.strip().lower()
     mask &= df.apply(
         lambda row: st_text in str(row["Atividade"]).lower()
-        or st_text in str(row["Ministrante/Responsável"]).lower()
+        or st_text in str(row["Palestrante"]).lower()
         or st_text in str(row["Horário"]).lower(),
         axis=1,
     )

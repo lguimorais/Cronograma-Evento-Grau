@@ -14,11 +14,11 @@ def render_sidebar(df):
     sel_turnos = st.sidebar.multiselect(
         "Turno", options=turnos, default=turnos)
 
-    ministrantes = sorted(df["Ministrante/Responsável"].dropna().unique())
+    ministrantes = sorted(df["Palestrante"].dropna().unique())
     sel_ministrante = st.sidebar.multiselect(
-        "Ministrante", options=ministrantes, default=ministrantes)
+        "Palestrante", options=ministrantes, default=ministrantes)
 
     search_text = st.sidebar.text_input(
-        "Pesquisar (atividade, ministrante, horário)", "")
+        "Pesquisar (atividade, palestrante, horário)", "")
 
     return sel_dates, sel_turnos, sel_ministrante, search_text
