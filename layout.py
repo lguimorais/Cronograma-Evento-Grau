@@ -21,7 +21,7 @@ def render_header():
     st.title("📋 Cronograma — Impacto Social (Grau Dirceu)")
     st.markdown(
         "Formulario de inscrição para as palestras: \n"
-        '<a href="https://forms.gle/7o9BC76m5C2U6xPG7" target="_blank">formulario de inscrição</a>',
+        '<a href="https://forms.gle/7o9BC76m5C2U6xPG7" target="_blank"; style="font-size:16px; font-weight:bold;>formulario de inscrição</a>',
         unsafe_allow_html=True
     )
     st.markdown(
