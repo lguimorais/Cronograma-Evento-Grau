@@ -56,3 +56,16 @@ def render_table(df_f):
         .reset_index(drop=True),
         use_container_width=True,
     )
+
+
+st.markdown(
+    """
+    <style>
+    [data-testid="stAppViewContainer"] {
+        background-color: white;
+        color: black;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)

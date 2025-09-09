@@ -22,3 +22,16 @@ def render_sidebar(df):
         "Pesquisar (atividade, palestrante, horário)", "")
 
     return sel_dates, sel_turnos, sel_ministrante, search_text
+
+
+st.markdown(
+    """
+    <style>
+    [data-testid="stAppViewContainer"] {
+        background-color: white;
+        color: black;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)

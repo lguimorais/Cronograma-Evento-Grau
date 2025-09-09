@@ -23,3 +23,16 @@ def render_header():
         "📅 Período: **16/09/2025 a 20/09/2025**  \n"
         "Use os filtros no menu lateral para ajustar a visualização."
     )
+
+
+st.markdown(
+    """
+    <style>
+    [data-testid="stAppViewContainer"] {
+        background-color: white;
+        color: black;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
