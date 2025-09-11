@@ -1,7 +1,7 @@
 from pathlib import Path
 
 # Configuração
-EXCEL_PATH = Path("Cronograma_Impacto_Social_Grau_Dirceu.xlsx")
+EXCEL_PATH = Path("Evento_Palestras_Workshops.xlsx")
 
 # Dados padrão caso não exista Excel
 DEFAULT_DATA = [
@@ -72,3 +72,22 @@ DEFAULT_DATA = [
     ["20/09/2025", "Tarde", "13:30–16:30",
         "Curso Brigadista em Ação: Preparado para Qualquer Emergência", "Bombeiro Civil Érico Nunes"],
 ]
+
+# Configuração
+EXCEL_PATH_PODCAST = Path("Evento_Podthe.xlsx")
+
+# Dados padrão caso não exista Excel
+DEFAULT_DATA_PODCAST = [
+]
+# Configuração
+EXCEL_PATH_ACOES = Path("Evento_Acoes_Sociais.xlsx")
+
+# Dados padrão caso não exista Excel
+DEFAULT_DATA_ACOES = [
+]
+
+
+
+
+
+

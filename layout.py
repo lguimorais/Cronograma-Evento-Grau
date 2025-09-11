@@ -24,8 +24,7 @@ def render_header():
         unsafe_allow_html=True
     )
     st.markdown(
-        "📅 Período: **16/09/2025 a 20/09/2025**  \n"
-        "Use os filtros no menu lateral para ajustar a visualização."
+        "📅 Período: **15/09/2025 a 20/09/2025**  \n"
     )
 
 

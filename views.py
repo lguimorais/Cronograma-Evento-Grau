@@ -23,7 +23,7 @@ def render_download(df_f):
 
 
 def render_agenda(df_f, unique_dates_sorted):
-    st.header("📅 Agenda por Data")
+    st.header("Palestras/Workshops:")
     for d in unique_dates_sorted:
         d_str = d.strftime("%d/%m/%Y")
         df_day = df_f[df_f["Data_dt"].dt.date == d]
@@ -45,6 +45,60 @@ def render_agenda(df_f, unique_dates_sorted):
                         <p><b>📌 Turno:</b> {row['Turno']}</p>
                         <p><b>🎯 Atividade:</b> {row['Atividade']}</p>
                         <p><b>👤 Palestrante:</b> {row['Palestrante']}</p>
+                    </div>
+                """, unsafe_allow_html=True)
+
+
+def render_podcast(df_f, unique_dates_sorted):
+    st.header("📅 Podcasts PodThe:")
+    for d in unique_dates_sorted:
+        d_str = d.strftime("%d/%m/%Y")
+        df_day = df_f[df_f["Data_dt"].dt.date == d]
+        if df_day.empty:
+            continue
+        with st.expander(f"{d_str} — {len(df_day)} atividades", expanded=False):
+            df_day_sorted = df_day.sort_values(["Turno", "Horário"])
+            for _, row in df_day_sorted.iterrows():
+                st.markdown(f"""
+                    <div style="
+                        background-color:#ffffff;
+                        border:1px solid #ddd;
+                        border-radius:12px;
+                        padding:12px;
+                        margin-bottom:10px;
+                        box-shadow:0 2px 4px rgba(0,0,0,0.05);
+                    ">
+                        <p><b>🕒 Horário:</b> {row['Horário']}</p>
+                        <p><b>📌 Turno:</b> {row['Turno']}</p>
+                        <p><b>🎯 Tema:</b> {row['Atividade']}</p>
+                        <p><b>👤 Participante:</b> {row['Palestrante']}</p>
+                    </div>
+                """, unsafe_allow_html=True)
+
+
+def render_acoes(df_f, unique_dates_sorted):
+    st.header("📅 Ações Sociais:")
+    for d in unique_dates_sorted:
+        d_str = d.strftime("%d/%m/%Y")
+        df_day = df_f[df_f["Data_dt"].dt.date == d]
+        if df_day.empty:
+            continue
+        with st.expander(f"{d_str} — {len(df_day)} atividades", expanded=False):
+            df_day_sorted = df_day.sort_values(["Turno", "Horário"])
+            for _, row in df_day_sorted.iterrows():
+                st.markdown(f"""
+                    <div style="
+                        background-color:#ffffff;
+                        border:1px solid #ddd;
+                        border-radius:12px;
+                        padding:12px;
+                        margin-bottom:10px;
+                        box-shadow:0 2px 4px rgba(0,0,0,0.05);
+                    ">
+                        <p><b>🕒 Horário:</b> {row['Horário']}</p>
+                        <p><b>📌 Turno:</b> {row['Turno']}</p>
+                        <p><b>🎯 Tema:</b> {row['Atividade']}</p>
+                        <p><b>👤 Participante:</b> {row['Palestrante']}</p>
                     </div>
                 """, unsafe_allow_html=True)
 
