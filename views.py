@@ -23,7 +23,7 @@ def render_download(df_f):
 
 
 def render_agenda(df_f, unique_dates_sorted):
-    st.header("Palestras/Workshops:")
+    st.header("📅 Palestras/Workshops:")
     for d in unique_dates_sorted:
         d_str = d.strftime("%d/%m/%Y")
         df_day = df_f[df_f["Data_dt"].dt.date == d]
