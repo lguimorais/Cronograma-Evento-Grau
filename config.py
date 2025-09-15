@@ -2,6 +2,8 @@ from pathlib import Path
 
 # Configuração
 EXCEL_PATH = Path("Evento_Palestras_Workshops.xlsx")
+EXCEL_PATH_ACOES = Path("Evento_Acoes_Sociais.xlsx")
+EXCEL_PATH_PODCAST = Path("Evento_Podthe.xlsx")
 
 # Dados padrão caso não exista Excel
 DEFAULT_DATA = [
@@ -74,20 +76,13 @@ DEFAULT_DATA = [
 ]
 
 # Configuração
-EXCEL_PATH_PODCAST = Path("Evento_Podthe.xlsx")
+
 
 # Dados padrão caso não exista Excel
 DEFAULT_DATA_PODCAST = [
 ]
 # Configuração
-EXCEL_PATH_ACOES = Path("Evento_Acoes_Sociais.xlsx")
 
 # Dados padrão caso não exista Excel
 DEFAULT_DATA_ACOES = [
 ]
-
-
-
-
-
-
