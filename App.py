@@ -29,6 +29,7 @@ if search_text.strip():
         axis=1,
     )
 
+
 df_f = df.loc[mask].copy()
 df_f_pod = df_podcast.loc[mask].copy()
 df_f_acoes = df_acoes.loc[mask].copy()
