@@ -47,6 +47,11 @@ unique_dates_sorted = sorted(df_podcast["Data_dt"].dropna().dt.date.unique())
 render_podcast(df_f_pod, unique_dates_sorted)
 unique_dates_sorted = sorted(df_acoes["Data_dt"].dropna().dt.date.unique())
 render_acoes(df_f_acoes, unique_dates_sorted)
+st.markdown(
+    """📌 Documentos necessários para Emissão de novas CIN (Carteira de Identidade Nacional):\n
+    Certidão de nascimento\n
+    Comprovante de endereço\n"""
+)
 
 
 
