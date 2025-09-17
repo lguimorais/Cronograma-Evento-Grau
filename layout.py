@@ -24,6 +24,10 @@ def render_header():
         unsafe_allow_html=True
     )
     st.markdown(
+        '<a href="https://forms.gle/7wyVUgCJwusj7HrL6" target="_blank" style="font-size:22px; font-weight:bold;">Clique aqui: AVALIAÇÃO GRTUITA EXAME OPTOMÉTRICO.</a>',
+        unsafe_allow_html=True
+    )
+    st.markdown(
         "📅 Período: **15/09/2025 a 20/09/2025**  \n"
     )
 
